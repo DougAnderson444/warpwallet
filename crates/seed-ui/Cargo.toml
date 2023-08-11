@@ -1,0 +1,23 @@
+[package]
+edition = "2021"
+name = "seed-ui"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+getrandom = "0.2"
+lazy_static = "1.4.0"
+nanoid = "0.4.0"
+render = "0.3.1"                                              # for html! macro, see https://github.com/render-rs/render.rs
+wit-bindgen = { version = "0.6.0", default_features = false }
+# wurbo = { path = "../../../wurbo/crates/hello" }
+
+[package.metadata.component]
+package = "component:seed-ui"
+
+[package.metadata.component.target]
+path = "wit"
+
+[package.metadata.component.dependencies]

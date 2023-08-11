@@ -1,0 +1,6 @@
+[workspace]
+members = ["seed-bindgen", "seed-core", "seed-ui"]
+resolver = "2"
+
+[workspace.dependencies]
+seed-core = { path = "./seed-core" }
