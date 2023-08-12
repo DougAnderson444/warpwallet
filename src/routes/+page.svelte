@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { base } from '$app/paths';
 	import htmlRaw from '../../wallet/dist/index.html?raw';
 
 	import { encode, decode, encodeURLSafe, decodeURLSafe } from '@stablelib/base64';
@@ -29,7 +30,7 @@
 	let integrity;
 
 	onMount(async () => {
-		const appRaw = await fetch('/wallet.js').then((res) => res.text());
+		const appRaw = await fetch(`${base}/wallet.js`).then((res) => res.text());
 
 		// generate sha256 Subresource Integrity of app.js (appRaw)
 		// and use it as integrity attribute of script tag
