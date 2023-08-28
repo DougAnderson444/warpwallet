@@ -1,5 +1,5 @@
 [workspace]
-members = ["seed-bindgen", "seed-core", "seed-ui"]
+members = ["bls-ckd", "seed-bindgen", "seed-core", "seed-ui"]
 resolver = "2"
 
 [workspace.dependencies]
